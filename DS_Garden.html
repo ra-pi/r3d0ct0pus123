@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DS Garden | Red Octopus</title>
+  <link rel="icon" type="image/x-icon" href="images/octopus.png">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/DSgarden.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="business3">
+  <div id="header"></div>
+
+  <main>
+    <!-- DS Garden Resort Section -->
+    <section class="garden-banner">
+      <img src="images/dsgardenresort.png" class="garden-logo" alt="DS Garden Resort Logo" />
+      <h1>DS GARDEN</h1>
+
+      <!-- Image Slider -->
+      <div class="garden-slider">
+        <!-- <button class="slide-btn prev">❮</button> -->
+        <img id="garden-slide" class="garden-slide-img" src="images/soon.jpg" alt="Resort Image" />
+        <!-- <button class="slide-btn next">❯</button> -->
+      </div>
+    </section>
+
+    <!-- Resort Description -->
+    <div class="garden-description">
+      <p>
+        Looking for a peaceful escape? Come and relax at DS Garden Resort, where fresh air, beautiful gardens, and cozy vibes await you!<br><br>
+        Surrounded by nature, our resort is the perfect place to unwind, celebrate, and make unforgettable memories with family and friends.
+        Enjoy a refreshing swim, stroll through our lush gardens, or simply chill and take in the calm atmosphere.<br><br>
+        Relax. Refresh. Reconnect. — only at DS Garden Resort!
+      </p>
+    </div>
+
+    <!-- Exclusive/VIP Rooms with Pool -->
+      <div class="info-container">
+        <div class="info-image">
+          <img src="images/soon2.png" />
+        </div>
+        <div class="info-text">
+          <h2 class="info-heading">Exclusive/VIP Rooms with Pool </h2>
+          <p class="info-description">SOON</p>
+        </div>
+      </div>
+
+      <div class="info-container">
+        <div class="info-image">
+          <img src="images/soon2.png" />
+        </div>
+        <div class="info-text">
+          <h2 class="info-heading">Food Park </h2>
+          <p class="info-description">SOON</p>
+        </div>
+      </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Main global script -->
+  <script src="script.js"></script>
+
+  <!-- Slider script (separate JS file for garden page) -->
+  <script src="garden-slider.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const images = [
+    'images/soon.jpg',
+    'images/soon2.png',
+    'images/soon3.png'
+  ];
+  let current = 0;
+
+  const slideImg = document.getElementById('garden-slide');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  function showSlide(index) {
+    current = (index + images.length) % images.length;
+    slideImg.src = images[current];
+  }
+
+  //prevBtn.addEventListener('click', () => showSlide(current - 1)); 
+  //nextBtn.addEventListener('click', () => showSlide(current + 1)); 
+
+  // Auto slide every 4 seconds
+  setInterval(() => showSlide(current + 1), 4000);
+});
+</script>
+</body>
+</html>

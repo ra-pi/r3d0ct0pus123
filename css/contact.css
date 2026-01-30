@@ -1,0 +1,155 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+body{
+  font-family: 'Outfit';
+  background: linear-gradient(#ffc75e, #ffabab);
+}
+.contact-container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-left{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.contact-left-title h2{
+  font-weight: 600;
+  color: #ff146e;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.contact-left-title hr{
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: #ff146e;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.contact-inputs{
+  width: 400px;
+  height: 50px;
+  border:none;
+  outline: none;
+  padding-left: 20px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+.contact-left textarea{
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+.contact-inputs:focus{
+  border: 2px solid hsl(337, 100%, 58%);
+}
+.contact-inputs::placeholder{
+  font-weight: 500;
+  color: #aaa;
+}
+.contact-left button{
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #ffffff;
+  gap:10px;
+  border:none;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #ff3f5f, #eb8d00);
+  cursor: pointer;
+}
+.contact-left button img{
+  height: 15px;
+}
+.contact-right img{
+  width: 500px;
+}
+
+/* -------------------- LARGE DESKTOP (1440px and up) -------------------- */
+@media (min-width: 1440px) {
+  .contact-container {
+    padding: 0 80px;
+  }
+
+  .contact-right img {
+    width: 600px;
+  }
+
+  .contact-inputs {
+    width: 450px;
+  }
+}
+
+
+/* -------------------- LAPTOP (1024px to 1439px) -------------------- */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .contact-container {
+    padding: 0 50px;
+  }
+
+  .contact-right img {
+    width: 480px;
+  }
+
+  .contact-inputs {
+    width: 380px;
+  }
+}
+
+
+/* -------------------- TABLET (801px to 1023px) -------------------- */
+@media (min-width: 801px) and (max-width: 1023px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .contact-left {
+    align-items: center;
+  }
+
+  .contact-inputs {
+    width: 70vw;
+  }
+
+  .contact-right img {
+    width: 350px;
+  }
+}
+
+
+/* -------------------- MOBILE (max 800px) -------------------- */
+@media (max-width: 800px) {
+  .contact-container {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 0;
+    gap: 40px;
+  }
+
+  .contact-left {
+    align-items: center;
+  }
+
+  .contact-inputs {
+    width: 80vw;
+  }
+
+  .contact-right {
+    display: none;
+  }
+}

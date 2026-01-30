@@ -1,0 +1,208 @@
+/* -------------------- GENERAL RESET -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f0f);
+  color: #fff;
+  line-height: 1.7;
+}
+
+main {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------- SECTION TITLE / LOGO -------------------- */
+.info-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.dsfarm-description-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* -------------------- DESCRIPTION HEADER -------------------- */
+.dsfarm-description-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dsfarm-description-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.dsfarm-description {
+  font-size: 16px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  text-align: justify;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* -------------------- SLIDER -------------------- */
+.slider-container {
+  position: relative;
+  max-width: 800px;
+  height: 450px; /* fixed height for uniform images */
+  margin: 0 auto 50px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;       /* fill container height */
+  object-fit: cover;  /* maintain aspect ratio and crop if needed */
+  border-radius: 15px;
+}
+
+/* SLIDER BUTTONS */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: #000000;
+  font-size: 23px;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 50%; /* fully round */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide-btn:hover {
+  background-color: #000000; /* slightly brighter */
+  color: #ffffff;            /* darker icon */
+  box-shadow: 0 8px 20px rgb(255, 255, 255); /* subtle glow */
+}
+
+.slide-btn.left {
+  left: 15px;
+}
+
+.slide-btn.right {
+  right: 15px;
+}
+
+
+/* -------------------- INFO CONTAINERS -------------------- */
+.info-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.info-container .info-image {
+  flex: 1 1 5%;
+}
+
+.info-container .info-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.info-container .info-text {
+  flex: 1 1 50%;
+}
+
+.info-text .info-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.info-text .info-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+  text-align: justify;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 1024px) {
+  .info-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-text .info-heading {
+    font-size: 26px;
+  }
+
+  .info-text .info-description {
+    font-size: 15px;
+  }
+
+  .dsfarm-description-header h2 {
+    font-size: 32px;
+  }
+
+  .dsfarm-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dsfarm-description-header h2 {
+    font-size: 28px;
+  }
+
+  .dsfarm-description {
+    font-size: 14px;
+  }
+
+  .info-text .info-heading {
+    font-size: 24px;
+  }
+
+  .info-text .info-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dsfarm-description-header h2 {
+    font-size: 24px;
+  }
+
+  .dsfarm-description {
+    font-size: 13px;
+  }
+
+  .info-text .info-heading {
+    font-size: 20px;
+  }
+
+  .info-text .info-description {
+    font-size: 13px;
+  }
+
+  .slide-btn {
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+}

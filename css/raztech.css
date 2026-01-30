@@ -1,0 +1,166 @@
+/* -------------------- GENERAL RESET -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #03242c);
+  color: #fff;
+  line-height: 1.7;
+}
+
+main {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------- LOGO -------------------- */
+.raztech-logo {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+/* -------------------- INFO CONTAINERS -------------------- */
+.info-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.info-container .info-image {
+  flex: 1 1 5%;
+}
+
+.info-container .info-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.info-container .info-text {
+  flex: 1 1 50%;
+}
+
+.info-text .info-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #55f9ff;
+}
+
+.info-text .info-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #efff95;
+  text-align: justify;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 1024px) {
+  .info-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-text .info-heading {
+    font-size: 26px;
+  }
+
+  .info-text .info-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-text .info-heading {
+    font-size: 24px;
+  }
+
+  .info-text .info-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-text .info-heading {
+    font-size: 20px;
+  }
+
+  .info-text .info-description {
+    font-size: 13px;
+  }
+}
+
+/* Team Section Styles */
+.team-section {
+  background-color: #0000008f;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.team-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.team-member {
+  max-width: 300px;
+}
+
+.team-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #fff; 
+}
+
+.team-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.team-role {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.team-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    max-width: 80%;
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+
+  <!-- Burger (always visible) -->
+  <div class="burger" id="burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="siteHeader">
+    <div class="logo"><a href="index.html">Red-Octopus</a></div>
+    <nav id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="DairySquare.html">Dairy Square Agri-Trading Farm</a>
+    <a href="RealEstate.html">Real Estate And Construction Services</a>
+    <a href="Raztech.html">Raztech</a>
+    <a href="DS_Farm_Canada.html">DS Farm Canada</a>
+    <a href="StaffHouse.html">Staff House Inc.</a>
+    <a href="RazoInstitute.html">Razo Institute Of Technology and Agricultural Training Center Inc.</a>
+    <a href="Wizard.html">Wizard 3 Security Agency Inc.</a>
+    <a href="DS_Garden.html">DS Garden</a>
+  </div>
+
+  <!-- Sidebar toggle script -->
+  <script>
+    const burger = document.getElementById("burger");
+    const sidebar = document.getElementById("sidebar");
+    const body = document.body;
+
+    burger.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+      burger.classList.toggle("active");
+      body.classList.toggle("sidebar-open");
+    });
+  </script>
+
+</body>
+</html>

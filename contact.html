@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Red-Octopus</title>
+  <link rel="icon" type="image/x-icon" href="images/octopus.png">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div class="contact-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+      <div class="contact-left-title">
+        <h2>Get in touch</h2>
+        <hr>
+      </div>
+      <input type="hidden" name="access_key" value="ddc08815-3a09-4920-a230-1836abd6103d">
+      <input 
+        type="text" 
+        name="name" 
+        placeholder="Your Name" 
+        class="contact-inputs" 
+        pattern="[A-Za-z ]+" 
+        title="Letters only, no numbers or symbols" 
+        required />
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Your E-mail" 
+        class="contact-inputs" 
+        pattern="^[^@]+@[^@]+\.[^@]+$"
+        title="Enter a valid email (must contain @ and .)"
+        required />
+      <input 
+        type="tel" 
+        name="phone" 
+        placeholder="Your Mobile Number" 
+        class="contact-inputs" 
+        pattern="09[0-9]{9}"
+        value="09"
+        oninput="if (!this.value.startsWith('09')) this.value = '09' + this.value.replace(/[^0-9]/g, '')"
+        title="Phone number must start with 09 and be 11 digits long" 
+        required />
+      <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+      <button type="submit">Submit<img src="assets/arrow_icon.png"></button>
+
+    </form>
+    <div class="contact-right">
+      <img src="assets/octopus-call.png" alt="Contact Image">
+    </div>
+  </div>
+
+
+  <!--
+  <div id="header"></div>
+  <main>
+    <div id="contact" class="active">
+    <h1 class="active">Contact Red Octopus</h1>
+      <section class="form-container">
+        <form>
+          <input type="text" placeholder="First Name" required />
+          <input type="text" placeholder="Last Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <div class="phone-group">
+            <select required>
+              <option value="+63">🇵🇭 +63 (PH)</option>
+              <option value="+1">🇺🇸 +1 (US)</option>
+              <option value="+44">🇬🇧 +44 (UK)</option>
+              <option value="+81">🇯🇵 +81 (JP)</option>
+            </select>
+            <input type="tel" placeholder="Mobile Number" required />
+          </div>
+          <textarea rows="5" placeholder="Your message..." required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+   -->
+  <div id="footer"></div>
+  <script src="script.js"></script>
+</body>
+</html>

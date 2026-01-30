@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+/* -------------------- HEADER -------------------- */
+header {
+  background: #272727;
+  color: #ff3636;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; 
+  padding: 15px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+/* -------------------- TOP NAV -------------------- */
+nav {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: rgb(255, 80, 80);
+}
+
+/* -------------------- BURGER -------------------- */
+.burger {
+  display: flex;             /* always visible */
+  position: fixed;           /* fixed on screen */
+  top: 18px;                 /* distance from top */
+  left: 20px;                /* distance from left */
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 2000;             /* higher than sidebar */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burger div {
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.burger:hover {
+  transform: scale(1.1);
+}
+
+/* Burger toggle animation */
+.burger.active .line1 {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger.active .line2 {
+  opacity: 0;
+}
+
+.burger.active .line3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* -------------------- SIDEBAR -------------------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 240px;
+  height: 100vh;
+  background: #2b2b2b;
+  color: #fff;
+  padding-top: 70px;
+  overflow-y: auto; /* allow vertical scrolling */
+  scroll-behavior: smooth; /* smooth scrolling */
+  transition: left 0.5s ease, border-radius 0.4s ease;
+  z-index: 1001;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 10px;
+  margin: 5px 10px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Custom scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+/* Desktop: hide Home, About, Contact in sidebar */
+@media (min-width: 1025px) {
+  .sidebar a[href="index.html"],
+  .sidebar a[href="about.html"],
+  .sidebar a[href="contact.html"] {
+    display: none;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  nav {
+    display: none; /* hide top nav */
+  }
+
+  .sidebar {
+    width: 220px;
+    left: -240px;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar a {
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  header {
+    flex-direction: row;
+    justify-content: center; /* center logo */
+    align-items: center;
+    position: relative;
+    padding: 8px 16px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .burger {
+    top: 16px; /* slightly adjust for smaller screens */
+    left: 16px;
+    width: 28px;
+    height: 22px;
+    z-index: 2000;  /* above sidebar */
+  }
+
+  .sidebar {
+    width: 200px;
+    left: -220px;
+    padding-top: 70px;
+    transition: left 0.4s ease;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar a {
+    font-size: 0.95rem;
+    padding: 12px 18px;
+  }
+
+  /* Prevent scrolling when sidebar is open */
+  body.sidebar-open {
+    overflow: hidden;
+  }
+}

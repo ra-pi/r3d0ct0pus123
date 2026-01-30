@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  #navLinks {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .info-container,
+  .egg-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}

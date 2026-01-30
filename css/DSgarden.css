@@ -1,0 +1,212 @@
+body.business3::before {
+  background-color: #b7c589ad;
+}
+
+/* ---------------------------------------------------
+   BANNER SECTION
+--------------------------------------------------- */
+.garden-banner {
+  position: relative;
+  min-height: 100vh;
+  color: #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* LOGO */
+.garden-logo {
+  position: absolute;
+  top: 40px;         /* move slightly down */
+  left: 50%;         /* center horizontally */
+  transform: translateX(-50%);
+  width: 380px;      /* bigger logo */
+  height: auto;
+  border-radius: 50%;
+  z-index: 10;       /* keeps it above everything */
+}
+
+/* TITLE */
+.garden-banner h1 {
+  padding-top: 340px;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(42px, 8vw, 100px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #1b2a14;
+}
+
+/* ---------------------------------------------------
+   SLIDER
+--------------------------------------------------- */
+.garden-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.garden-slide-img {
+  width: min(960px, 95vw);
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 35px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: opacity 0.5s ease, transform 0.4s ease;
+}
+
+/* BUTTONS */
+.slide-btn {
+  background: #2e2e2e;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slide-btn:hover {
+  background: #ff5252;
+  color: #111;
+  transform: scale(1.15);
+}
+
+/* ---------------------------------------------------
+   DESCRIPTION
+--------------------------------------------------- */
+.garden-description {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: rgba(45, 66, 36, 0.9);
+  color: #fff;
+  padding: clamp(40px, 6vw, 60px) 20px;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.8;
+  text-align: justify;
+  border-radius: 50px;
+  margin-bottom: 40px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.garden-description p {
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+/* ---------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+--------------------------------------------------- */
+
+/* Tablets + Small Laptops */
+@media (max-width: 1024px) {
+  .garden-logo {
+    width: 200px;
+  }
+
+  .slide-btn {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  .garden-banner {
+     padding-top: 180px;
+  }
+
+  .garden-slider {
+    margin-top: 40px;
+  }
+
+  .slide-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+  .garden-logo {
+    width: 190px;
+  }
+  .garden-banner {
+     padding-top: 1px;
+  }
+
+  .garden-description {
+    font-size: 15px;
+    border-radius: 30px;
+  }
+}
+
+/* Large Laptops (MacBook Air) */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .garden-slide-img {
+    width: 75%;
+    height: auto;
+  }
+}
+
+/* ---------------------------------------------------
+   SOON / EXCLUSIVE SECTIONS
+--------------------------------------------------- */
+.info-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.info-container .info-image {
+  flex: 1 1 40%;
+}
+
+.info-container .info-image img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.info-container .info-text {
+  flex: 1 1 50%;
+}
+
+.info-text .info-heading {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #003308;
+}
+
+.info-text .info-description {
+  font-size: clamp(13px, 2vw, 16px);
+  line-height: 1.6;
+  color: #002b00;
+  text-align: justify;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .info-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

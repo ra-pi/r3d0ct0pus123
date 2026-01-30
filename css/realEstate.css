@@ -1,0 +1,129 @@
+/* -------------------- GENERAL RESET -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #140000);
+  color: #fff;
+  line-height: 1.7;
+}
+
+main {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------- SECTION TITLE -------------------- */
+.info-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* -------------------- MAIN PARAGRAPH -------------------- */
+#secrealestate p {
+  font-size: 16px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  text-align: justify;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* -------------------- IMAGE + TEXT CONTAINER -------------------- */
+.info-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.info-container .info-image {
+  flex: 1 1 5%;
+}
+
+.info-container .info-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.info-container .info-text {
+  flex: 1 1 50%;
+}
+
+.info-text .info-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ff8585;
+}
+
+.info-text .info-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+  text-align: justify;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 1024px) {
+  .info-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-text .info-heading {
+    font-size: 26px;
+  }
+
+  .info-text .info-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-title {
+    font-size: 28px;
+  }
+
+  #secrealestate p {
+    font-size: 14px;
+  }
+
+  .info-text .info-heading {
+    font-size: 24px;
+  }
+
+  .info-text .info-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-title {
+    font-size: 24px;
+  }
+
+  #secrealestate p {
+    font-size: 13px;
+  }
+
+  .info-text .info-heading {
+    font-size: 20px;
+  }
+
+  .info-text .info-description {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,128 @@
+/* -------------------- GENERAL RESET -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* consistent font */
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f0f); /* subtle dark gradient */
+  color: #fff;
+  line-height: 1.7;
+}
+
+main {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------- SECTION TITLE -------------------- */
+.info-title {
+  font-weight: 900;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.info-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #8a0000;
+  margin: 15px auto 40px auto;
+  border-radius: 2px;
+}
+
+/* -------------------- MAIN PARAGRAPH -------------------- */
+#bz8 p {
+  font-size: 18px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  text-align: justify;
+  color: #fff59b;
+}
+
+/* -------------------- IMAGE + TEXT CONTAINER -------------------- */
+.info-container {
+  display: flex;
+  gap: 20px;          /* space between image and text */
+  align-items: flex-start;
+  flex-wrap: wrap;     /* allows wrapping on smaller screens */
+  margin-bottom: 40px;
+}
+
+.info-container .info-image {
+  flex: 1 1 5%;       /* image takes 45% of container on desktop */
+}
+
+.info-container .info-image img {
+  width: 100%;         /* image fills its container */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-container .info-text {
+  flex: 1 1 50%;       /* text takes remaining space */
+}
+
+.info-text .info-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.info-text .info-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 1024px) {
+  .info-container {
+    flex-direction: column;  /* stack image above text */
+    gap: 20px;
+  }
+
+  .info-text .info-heading {
+    font-size: 26px;
+  }
+
+  .info-text .info-description {
+    font-size: 15px;
+  }
+  .info-title {
+  font-size: 45px;}
+}
+
+@media (max-width: 768px) {
+  .info-text .info-heading {
+    font-size: 24px;
+  }
+
+  .info-text .info-description {
+    font-size: 15px;
+  }
+  .info-title {
+  font-size: 40px;}
+}
+
+@media (max-width: 480px) {
+  .info-text .info-heading {
+    font-size: 20px;
+  }
+
+  .info-text .info-description {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,337 @@
+/* -------------------- ABOUT PAGE -------------------- */
+
+#about {
+  padding: 80px 20px;
+  background: #f8f9fb00;
+}
+
+.about-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* ---------- INTRO ---------- */
+
+.about-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-intro h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.about-intro p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #000000;
+}
+
+/* ---------- MISSION / VISION / ETC ---------- */
+
+.about-mission-vision {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.about-mission,
+.about-method,
+.about-philosophy {
+  background: #ffffffe8;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle top accent */
+.about-mission::before,
+.about-method::before,
+.about-philosophy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #ff3b3b, #ff8c00);
+}
+
+/*.about-mission:hover,
+.about-method:hover,
+.about-philosophy:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}*/
+
+.about-mission h2,
+.about-method h2,
+.about-philosophy h2 {
+  font-size: 1.5rem;
+  color: #111;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.about-mission p,
+.about-method p,
+.about-philosophy p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* ---------- FADE IN ANIMATION ---------- */
+
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* title */
+h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 38px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+h1 span {
+  display: block;
+}
+
+/* box styles */
+.box {
+  background: #0b5a7a;
+  color: white;
+  padding: 18px 22px;
+  border-radius: 4px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  min-width: 240px;
+  margin: 8px;
+  z-index: 2;
+}
+
+.box small {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.box.main {
+  background: #0a6b8f;
+  font-weight: bold;
+}
+
+.box.small {
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+/* layout */
+.level {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.center {
+  margin-bottom: 15px;
+}
+
+/* companies row */
+.companies {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  z-index: 2;
+  position: relative;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company-title {
+  background: #0b5a7a;
+  color: white;
+  font-weight: bold;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  min-width: 220px;
+}
+
+.chart-section {
+  position: relative;
+  padding: 50px 20px 80px;
+  text-align: center;
+  overflow-x: auto;
+}
+
+
+/* ===============================
+   LARGE DESKTOP (1440px and up)
+================================ */
+@media (min-width: 1440px) {
+  .about-wrapper {
+    max-width: 1300px;
+  }
+
+  .about-intro h1 {
+    font-size: 3.5rem;
+  }
+}
+
+
+/* ===============================
+   LAPTOP (1024px – 1366px)
+================================ */
+@media (max-width: 1366px) {
+  .about-wrapper {
+    max-width: 1000px;
+  }
+
+  .about-intro h1 {
+    font-size: 2.8rem;
+  }
+}
+
+
+/* ===============================
+   TABLET (768px – 1023px)
+================================ */
+@media (max-width: 1023px) {
+
+  .about-mission-vision {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro h1 {
+    font-size: 2.3rem;
+  }
+
+  .about-intro p {
+    font-size: 1rem;
+  }
+
+  .box {
+    min-width: 200px;
+    font-size: 13px;
+    padding: 14px 18px;
+  }
+
+  .company-title {
+    min-width: 200px;
+    font-size: 14px;
+  }
+
+  .companies {
+    gap: 15px;
+  }
+}
+
+
+/* ===============================
+   MOBILE (max-width: 767px)
+================================ */
+@media (max-width: 767px) {
+
+  #about {
+    padding: 60px 15px;
+  }
+
+  .about-wrapper {
+    gap: 40px;
+  }
+
+  .about-intro h1 {
+    font-size: 1.9rem;
+    line-height: 1.3;
+  }
+
+  .about-intro p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .box {
+    min-width: 100%;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .company {
+    width: 100%;
+  }
+
+  .company-title {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .companies {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .level {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+  .about-mission-vision {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #about {
+    padding: 60px 15px;
+  }
+
+  .about-intro h1 {
+    font-size: 2rem;
+  }
+
+  .about-mission,
+  .about-method,
+  .about-philosophy {
+    padding: 25px;
+  }
+}
